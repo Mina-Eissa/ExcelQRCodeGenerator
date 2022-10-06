@@ -16,7 +16,7 @@ namespace QRCodeGenrator_5dma
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new qrCodeGeneratorPage());
+            Application.Run(new Mainpage());
         }
     }
 }

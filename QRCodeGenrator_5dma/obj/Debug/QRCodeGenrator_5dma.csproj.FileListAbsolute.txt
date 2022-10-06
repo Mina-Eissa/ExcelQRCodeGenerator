@@ -10,3 +10,28 @@ C:\Users\x\Desktop\QrCode Project\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5
 C:\Users\x\Desktop\QrCode Project\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.pdb
 C:\Users\x\Desktop\QrCode Project\QRCodeGenrator_5dma\bin\Debug\QRCoder.dll
 C:\Users\x\Desktop\QrCode Project\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.csproj.CopyComplete
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\bin\Debug\QRCodeGenrator_5dma.exe.config
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\bin\Debug\QRCodeGenrator_5dma.exe
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\bin\Debug\QRCodeGenrator_5dma.pdb
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\bin\Debug\QRCoder.dll
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.csproj.AssemblyReference.cache
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.Properties.Resources.resources
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.csproj.GenerateResource.cache
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.csproj.CoreCompileInputs.cache
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.csproj.CopyComplete
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.exe
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.pdb
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\bin\Debug\AForge.dll
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\bin\Debug\AForge.Video.dll
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\bin\Debug\zxing.dll
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\bin\Debug\zxing.presentation.dll
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\bin\Debug\AForge.xml
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\bin\Debug\AForge.Video.xml
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\bin\Debug\zxing.xml
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\bin\Debug\zxing.presentation.xml
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.Mainpage.resources
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.GeneratorUserControl.resources
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.ScannerUserControl.resources
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.UserControls.WelcomeUserControl.resources
