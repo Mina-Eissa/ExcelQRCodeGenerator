@@ -34,18 +34,21 @@ namespace QRCodeGenrator_5dma
             this.Dashboardlbl = new System.Windows.Forms.Label();
             this.Generatebtn = new System.Windows.Forms.Button();
             this.Scanbtn = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.OperationsPanel = new System.Windows.Forms.Panel();
+            this.addMemberbtn = new System.Windows.Forms.Button();
+            this.welcomePage = new QRCodeGenrator_5dma.UserControls.WelcomeUserControl();
             this.scannerPage = new QRCodeGenrator_5dma.ScannerUserControl();
             this.generatorPage = new QRCodeGenrator_5dma.GeneratorUserControl();
-            this.welcomePage = new QRCodeGenrator_5dma.UserControls.WelcomeUserControl();
+            this.addMemberPage = new QRCodeGenrator_5dma.UserControls.AddMemberUserControl();
             this.DashboardPanel.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.OperationsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // DashboardPanel
             // 
             this.DashboardPanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.DashboardPanel.Controls.Add(this.Dashboardlbl);
+            this.DashboardPanel.Controls.Add(this.addMemberbtn);
             this.DashboardPanel.Controls.Add(this.Generatebtn);
             this.DashboardPanel.Controls.Add(this.Scanbtn);
             this.DashboardPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -89,17 +92,42 @@ namespace QRCodeGenrator_5dma
             this.Scanbtn.UseVisualStyleBackColor = true;
             this.Scanbtn.Click += new System.EventHandler(this.Scanbtn_Click);
             // 
-            // panel2
+            // OperationsPanel
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel2.Controls.Add(this.welcomePage);
-            this.panel2.Controls.Add(this.scannerPage);
-            this.panel2.Controls.Add(this.generatorPage);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(116, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1059, 685);
-            this.panel2.TabIndex = 1;
+            this.OperationsPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.OperationsPanel.Controls.Add(this.welcomePage);
+            this.OperationsPanel.Controls.Add(this.scannerPage);
+            this.OperationsPanel.Controls.Add(this.generatorPage);
+            this.OperationsPanel.Controls.Add(this.addMemberPage);
+            this.OperationsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OperationsPanel.Location = new System.Drawing.Point(116, 0);
+            this.OperationsPanel.Name = "OperationsPanel";
+            this.OperationsPanel.Size = new System.Drawing.Size(1059, 685);
+            this.OperationsPanel.TabIndex = 1;
+            // 
+            // addMemberbtn
+            // 
+            this.addMemberbtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.addMemberbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addMemberbtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.addMemberbtn.Location = new System.Drawing.Point(0, 188);
+            this.addMemberbtn.Name = "addMemberbtn";
+            this.addMemberbtn.Size = new System.Drawing.Size(116, 56);
+            this.addMemberbtn.TabIndex = 0;
+            this.addMemberbtn.Text = "Add Member";
+            this.addMemberbtn.UseVisualStyleBackColor = true;
+            this.addMemberbtn.Click += new System.EventHandler(this.addMemberbtn_Click);
+            // 
+            // welcomePage
+            // 
+            this.welcomePage.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.welcomePage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.welcomePage.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomePage.Location = new System.Drawing.Point(0, 0);
+            this.welcomePage.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.welcomePage.Name = "welcomePage";
+            this.welcomePage.Size = new System.Drawing.Size(1059, 685);
+            this.welcomePage.TabIndex = 2;
             // 
             // scannerPage
             // 
@@ -124,23 +152,23 @@ namespace QRCodeGenrator_5dma
             this.generatorPage.Size = new System.Drawing.Size(1059, 685);
             this.generatorPage.TabIndex = 0;
             // 
-            // welcomePage
+            // addMemberPage
             // 
-            this.welcomePage.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.welcomePage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.welcomePage.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomePage.Location = new System.Drawing.Point(0, 0);
-            this.welcomePage.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.welcomePage.Name = "welcomePage";
-            this.welcomePage.Size = new System.Drawing.Size(1059, 685);
-            this.welcomePage.TabIndex = 2;
+            this.addMemberPage.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.addMemberPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addMemberPage.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMemberPage.Location = new System.Drawing.Point(0, 0);
+            this.addMemberPage.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.addMemberPage.Name = "addMemberPage";
+            this.addMemberPage.Size = new System.Drawing.Size(1059, 685);
+            this.addMemberPage.TabIndex = 3;
             // 
             // Mainpage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1175, 685);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.OperationsPanel);
             this.Controls.Add(this.DashboardPanel);
             this.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -153,7 +181,7 @@ namespace QRCodeGenrator_5dma
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Mainpage_FormClosed);
             this.DashboardPanel.ResumeLayout(false);
             this.DashboardPanel.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.OperationsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -161,12 +189,14 @@ namespace QRCodeGenrator_5dma
         #endregion
 
         private System.Windows.Forms.Panel DashboardPanel;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel OperationsPanel;
         private System.Windows.Forms.Button Generatebtn;
         private System.Windows.Forms.Button Scanbtn;
         private System.Windows.Forms.Label Dashboardlbl;
         private GeneratorUserControl generatorPage;
         private ScannerUserControl scannerPage;
         private UserControls.WelcomeUserControl welcomePage;
+        private System.Windows.Forms.Button addMemberbtn;
+        private UserControls.AddMemberUserControl addMemberPage;
     }
 }

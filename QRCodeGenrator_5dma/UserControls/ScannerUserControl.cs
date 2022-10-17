@@ -111,16 +111,15 @@ namespace QRCodeGenrator_5dma
                 return;
             worksheet = workbook.Sheets[SheetsNamesIndecies[SelectedSheet]];
             range = worksheet.UsedRange;
-            nameColumnIndex = 1;
-            MessageBox.Show(range.Columns.Count.ToString());
-            //for (int i = 1; i <= range.Columns.Count; i++)
-            //{
-            //    string cell = Convert.ToString((range.Cells[1, i] as Excel.Range).Text);
-            //    if (cell == "الاسم" || cell == "Name")
-            //    {
-            //        nameColumnIndex = i;
-            //    }
-            //}
+            for (int i = 1; i <= range.Columns.Count; i++)
+            {
+                string cell = Convert.ToString((range.Cells[1, i] as Excel.Range).Text);
+                if (cell == "الاسم" || cell == "Name")
+                {
+                    nameColumnIndex = i;
+                    break;
+                }
+            }
         }
         private void SheetsNamesBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -201,6 +200,7 @@ namespace QRCodeGenrator_5dma
             int lastCellNotEmpty = range.Columns.Count;
             string cell = Convert.ToString((range.Cells[1, lastCellNotEmpty] as Excel.Range).Text),
                    date = DateTime.Today.ToString("dd-MM-yyyy");
+            date = $"\"{date}\"";
             if (cell != date)
             {
                 dateColumnIndex = lastCellNotEmpty + 1;

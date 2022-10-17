@@ -21,23 +21,33 @@ namespace QRCodeGenrator_5dma
         {
             generatorPage.Kill();
             scannerPage.Kill();
+            addMemberPage.Kill();
         }
         private void Mainpage_FormClosed(object sender, FormClosedEventArgs e)
         {
             generatorPage.Kill();
             scannerPage.Kill();
+            addMemberPage.Kill();
         }
 
         private void Scanbtn_Click(object sender, EventArgs e)
         {
             generatorPage.Close();
+            addMemberPage.Close();
             scannerPage.BringToFront();
         }
         private void Generatebtn_Click(object sender, EventArgs e)
         {
             scannerPage.Close();
+            addMemberPage.Close();
             generatorPage.BringToFront();
         }
 
+        private void addMemberbtn_Click(object sender, EventArgs e)
+        {
+            scannerPage.Close();
+            generatorPage.Close();
+            addMemberPage.BringToFront();
+        }
     }
 }

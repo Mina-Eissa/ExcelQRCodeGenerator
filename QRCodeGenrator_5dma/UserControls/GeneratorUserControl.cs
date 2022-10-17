@@ -76,14 +76,6 @@ namespace QRCodeGenrator_5dma
                 range.Cells[1, qrcodeColumnIndex] = "QRCode";
             }
         }
-        void SaveImage(Bitmap Code, string MemberName)
-        {
-            string directoryPath = SavePath + "\\Images";
-            if (!Directory.Exists(directoryPath))
-                Directory.CreateDirectory(directoryPath);
-            string fileName = directoryPath + "\\" + MemberName + ".jpg";
-            Code.Save(fileName, System.Drawing.Imaging.ImageFormat.Jpeg);
-        }
         private void Generatorbtn_Click(object sender, EventArgs e)
         {
             if (application == null)
@@ -106,10 +98,7 @@ namespace QRCodeGenrator_5dma
                 MessageBox.Show("Choose place to save codes.");
                 return;
             }
-            QRCodeGenerator generator = new QRCodeGenerator();
-            QRCodeData data;
-            QRCode code;
-            Bitmap image;
+            Generator generator = new Generator();
             string name, phone, qrCodeCheckCell;
             int counterNewMembers = 0;
             for (int i = 2; i <= range.Rows.Count; i++)
@@ -117,13 +106,10 @@ namespace QRCodeGenrator_5dma
                 qrCodeCheckCell = Convert.ToString((range.Cells[i, qrcodeColumnIndex] as Excel.Range).Text);
                 if (qrCodeCheckCell == "")
                 {
-                    range.Cells[i, qrcodeColumnIndex] = "QrCode is maded in : " + Application.StartupPath + "\\Images";
+                    range.Cells[i, qrcodeColumnIndex] = "QrCode is maded in : " + SavePath + "\\Images";
                     name = Convert.ToString((range.Cells[i, nameColumnIndex] as Excel.Range).Text);
                     phone = Convert.ToString((range.Cells[i, phoneNumberColumnIndex] as Excel.Range).Text);
-                    data = generator.CreateQrCode(name + "-" + phone, QRCodeGenerator.ECCLevel.Q);
-                    code = new QRCode(data);
-                    image = code.GetGraphic(5);
-                    SaveImage(image, name);
+                    generator.generateQRCode(name + "-" + phone, name, SavePath);
                     counterNewMembers++;
                 }
             }

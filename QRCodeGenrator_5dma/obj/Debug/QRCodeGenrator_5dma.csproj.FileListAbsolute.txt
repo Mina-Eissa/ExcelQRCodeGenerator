@@ -35,3 +35,4 @@ C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\Q
 C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.GeneratorUserControl.resources
 C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.ScannerUserControl.resources
 C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.UserControls.WelcomeUserControl.resources
+C:\Users\x\Desktop\projects\ExcelQRCodeGenerator\QRCodeGenrator_5dma\obj\Debug\QRCodeGenrator_5dma.UserControls.AddMemberUserControl.resources

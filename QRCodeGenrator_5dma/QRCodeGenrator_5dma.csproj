@@ -85,6 +85,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generator.cs" />
+    <Compile Include="UserControls\AddMemberUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AddMemberUserControl.Designer.cs">
+      <DependentUpon>AddMemberUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\GeneratorUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,6 +118,9 @@
     <Compile Include="UserControls\WelcomeUserControl.Designer.cs">
       <DependentUpon>WelcomeUserControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\AddMemberUserControl.resx">
+      <DependentUpon>AddMemberUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\GeneratorUserControl.resx">
       <DependentUpon>GeneratorUserControl.cs</DependentUpon>
     </EmbeddedResource>
