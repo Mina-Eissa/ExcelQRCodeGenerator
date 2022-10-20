@@ -50,6 +50,8 @@ namespace QRCodeGenrator_5dma.UserControls
             this.SavePlacelbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.AddressBox = new System.Windows.Forms.TextBox();
+            this.additionalSheetslbl = new System.Windows.Forms.Label();
+            this.additionalSheetsBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // Namelbl
@@ -64,7 +66,7 @@ namespace QRCodeGenrator_5dma.UserControls
             // NameBox
             // 
             this.NameBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.NameBox.Location = new System.Drawing.Point(219, 48);
+            this.NameBox.Location = new System.Drawing.Point(226, 48);
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(262, 28);
             this.NameBox.TabIndex = 0;
@@ -84,7 +86,7 @@ namespace QRCodeGenrator_5dma.UserControls
             // PhoneNumberBox
             // 
             this.PhoneNumberBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.PhoneNumberBox.Location = new System.Drawing.Point(219, 86);
+            this.PhoneNumberBox.Location = new System.Drawing.Point(226, 86);
             this.PhoneNumberBox.Name = "PhoneNumberBox";
             this.PhoneNumberBox.Size = new System.Drawing.Size(262, 28);
             this.PhoneNumberBox.TabIndex = 13;
@@ -110,7 +112,7 @@ namespace QRCodeGenrator_5dma.UserControls
             // CollegeBox
             // 
             this.CollegeBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.CollegeBox.Location = new System.Drawing.Point(219, 166);
+            this.CollegeBox.Location = new System.Drawing.Point(226, 166);
             this.CollegeBox.Name = "CollegeBox";
             this.CollegeBox.Size = new System.Drawing.Size(262, 28);
             this.CollegeBox.TabIndex = 17;
@@ -137,7 +139,7 @@ namespace QRCodeGenrator_5dma.UserControls
             // 
             this.UniversityBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.UniversityBox.FormattingEnabled = true;
-            this.UniversityBox.Location = new System.Drawing.Point(219, 124);
+            this.UniversityBox.Location = new System.Drawing.Point(226, 124);
             this.UniversityBox.Name = "UniversityBox";
             this.UniversityBox.Size = new System.Drawing.Size(262, 29);
             this.UniversityBox.TabIndex = 19;
@@ -146,7 +148,7 @@ namespace QRCodeGenrator_5dma.UserControls
             // 
             this.LevelBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.LevelBox.FormattingEnabled = true;
-            this.LevelBox.Location = new System.Drawing.Point(219, 204);
+            this.LevelBox.Location = new System.Drawing.Point(226, 204);
             this.LevelBox.Name = "LevelBox";
             this.LevelBox.Size = new System.Drawing.Size(262, 29);
             this.LevelBox.TabIndex = 19;
@@ -167,7 +169,7 @@ namespace QRCodeGenrator_5dma.UserControls
             // FilePathBox
             // 
             this.FilePathBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FilePathBox.Location = new System.Drawing.Point(219, 406);
+            this.FilePathBox.Location = new System.Drawing.Point(226, 406);
             this.FilePathBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.FilePathBox.Name = "FilePathBox";
             this.FilePathBox.Size = new System.Drawing.Size(670, 28);
@@ -188,7 +190,7 @@ namespace QRCodeGenrator_5dma.UserControls
             // 
             this.SheetsNamesBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SheetsNamesBox.FormattingEnabled = true;
-            this.SheetsNamesBox.Location = new System.Drawing.Point(219, 447);
+            this.SheetsNamesBox.Location = new System.Drawing.Point(226, 447);
             this.SheetsNamesBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.SheetsNamesBox.Name = "SheetsNamesBox";
             this.SheetsNamesBox.Size = new System.Drawing.Size(230, 29);
@@ -223,7 +225,7 @@ namespace QRCodeGenrator_5dma.UserControls
             // SavePlaceBox
             // 
             this.SavePlaceBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SavePlaceBox.Location = new System.Drawing.Point(219, 357);
+            this.SavePlaceBox.Location = new System.Drawing.Point(226, 357);
             this.SavePlaceBox.Name = "SavePlaceBox";
             this.SavePlaceBox.Size = new System.Drawing.Size(670, 28);
             this.SavePlaceBox.TabIndex = 27;
@@ -251,17 +253,44 @@ namespace QRCodeGenrator_5dma.UserControls
             // AddressBox
             // 
             this.AddressBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.AddressBox.Location = new System.Drawing.Point(219, 251);
+            this.AddressBox.Location = new System.Drawing.Point(226, 251);
             this.AddressBox.Multiline = true;
             this.AddressBox.Name = "AddressBox";
             this.AddressBox.Size = new System.Drawing.Size(262, 91);
             this.AddressBox.TabIndex = 17;
+            // 
+            // additionalSheetslbl
+            // 
+            this.additionalSheetslbl.AutoSize = true;
+            this.additionalSheetslbl.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.additionalSheetslbl.Location = new System.Drawing.Point(65, 492);
+            this.additionalSheetslbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.additionalSheetslbl.Name = "additionalSheetslbl";
+            this.additionalSheetslbl.Size = new System.Drawing.Size(157, 22);
+            this.additionalSheetslbl.TabIndex = 30;
+            this.additionalSheetslbl.Text = "Additional Sheet :";
+            // 
+            // additionalSheetsBox
+            // 
+            this.additionalSheetsBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.additionalSheetsBox.FormattingEnabled = true;
+            this.additionalSheetsBox.Location = new System.Drawing.Point(226, 489);
+            this.additionalSheetsBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.additionalSheetsBox.Name = "additionalSheetsBox";
+            this.additionalSheetsBox.Size = new System.Drawing.Size(230, 29);
+            this.additionalSheetsBox.TabIndex = 31;
+            this.additionalSheetsBox.SelectedIndexChanged += new System.EventHandler(this.additionalSheetsBox_SelectedIndexChanged);
+            this.additionalSheetsBox.TextUpdate += new System.EventHandler(this.additionalSheetsBox_SelectedIndexChanged);
+            this.additionalSheetsBox.TextChanged += new System.EventHandler(this.additionalSheetsBox_SelectedIndexChanged);
+            this.additionalSheetsBox.Click += new System.EventHandler(this.additionalSheetsBox_Click);
             // 
             // AddMemberUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Controls.Add(this.additionalSheetslbl);
+            this.Controls.Add(this.additionalSheetsBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SavePlaceBrowsebtn);
             this.Controls.Add(this.SavePlaceBox);
@@ -316,5 +345,7 @@ namespace QRCodeGenrator_5dma.UserControls
         private System.Windows.Forms.Label SavePlacelbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox AddressBox;
+        private System.Windows.Forms.Label additionalSheetslbl;
+        private System.Windows.Forms.ComboBox additionalSheetsBox;
     }
 }

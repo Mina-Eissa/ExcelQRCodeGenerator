@@ -21,10 +21,11 @@ namespace QRCodeGenrator_5dma.UserControls
             Addressindex = 0,
             qrcodeColumnIndex = 0,
             LastRowindex = 0;
+        bool message = false;
         Excel.Application application;
         Excel.Workbook workbook;
-        Excel.Worksheet worksheet;
-        Excel.Range range;
+        Excel.Worksheet worksheet,addWorksheet;
+        Excel.Range range,addRange;
         Dictionary<string, int> SheetsNamesIndecies;
         string SavePath = "";
         public AddMemberUserControl()
@@ -93,6 +94,10 @@ namespace QRCodeGenrator_5dma.UserControls
             range.Cells[LastRowindex, Levelindex] = LevelBox.Text;
             range.Cells[LastRowindex, Addressindex] = $"\"{AddressBox.Text}\"";
             range.Cells[LastRowindex, qrcodeColumnIndex] = SavePath + "\\Images";
+            if (addWorksheet != null)
+            {
+                addRange.Cells[addRange.Rows.Count + 1, 1] = $"\"{NameBox.Text}\"";
+            }
             MessageBox.Show("This data saved successfuly.");
             ClearFields();
         }
@@ -141,6 +146,7 @@ namespace QRCodeGenrator_5dma.UserControls
             {
                 Excel.Worksheet SheetName = workbook.Sheets[i];
                 SheetsNamesBox.Items.Add(SheetName.Name);
+                additionalSheetsBox.Items.Add(SheetName.Name);
                 SheetsNamesIndecies[SheetName.Name] = i;
             }
         }
@@ -190,6 +196,35 @@ namespace QRCodeGenrator_5dma.UserControls
                 range.Cells[1, qrcodeColumnIndex] = "QRCode";
             }
         }
+
+        private void additionalSheetsBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string SelectedSheet = SheetsNamesBox.Items[additionalSheetsBox.SelectedIndex].ToString();
+            InitializeAdditionalSheet(SelectedSheet);
+        }
+
+        private void InitializeAdditionalSheet(string SelectedSheet)
+        {
+            if (SheetsNamesIndecies.ContainsKey(SelectedSheet) == false)
+                return;
+            string cell= Convert.ToString((range.Cells[1, 1] as Excel.Range).Text);
+            if (cell != "Name")
+            {
+                MessageBox.Show("Cell 1A must contain Name");
+                return;
+            }
+            addWorksheet = workbook.Sheets[SheetsNamesIndecies[SelectedSheet]];
+            addRange = addWorksheet.UsedRange;
+        }
+        private void additionalSheetsBox_Click(object sender, EventArgs e)
+        {
+            if (!message)
+            {
+                MessageBox.Show("cell 1A must contain Name");
+                message = true;
+            }
+        }
+
         private void SheetsNamesBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string SelectedSheet = SheetsNamesBox.Items[SheetsNamesBox.SelectedIndex].ToString();
@@ -270,6 +305,7 @@ namespace QRCodeGenrator_5dma.UserControls
             FilePathBox.Text = "";
             SheetsNamesBox.Text = "";
             SavePlaceBox.Text = "";
+            additionalSheetsBox.Text = "";
         }
     }
 }
